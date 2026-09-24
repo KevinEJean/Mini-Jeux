@@ -12,11 +12,9 @@ public class Door : MonoBehaviour
         {
             GameManager.Instance.LoadGambleRoomScene();
         }
-        else if (gameObject.tag.Contains("Level"))
+        else if (gameObject.tag == "Level1")
         {
             GameManager.Instance.LoadScene(gameObject.tag);
         }
-
-        Debug.Log("Collect 1 gold coin to access the casino.");
     }
 }

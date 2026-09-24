@@ -10,6 +10,10 @@ TagManager:
   - Casino
   - Door
   - Box
+  - Bullet
+  - Ennemy
+  - Wall
+  - Level2
   layers:
   - Default
   - TransparentFX

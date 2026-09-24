@@ -40,6 +40,5 @@ public class Ennemy : MonoBehaviour
             return;
 
         Player.Instance.PlayerHealth(-15f);
-        Destroy(gameObject);
     }
 }
