@@ -1,3 +1,4 @@
+using UnityEditor.Timeline;
 using UnityEngine;
 
 public class Ennemy : MonoBehaviour
@@ -5,6 +6,7 @@ public class Ennemy : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float minRange;
     [SerializeField] private float maxRange;
+    [SerializeField] private Animator anim;
 
     private Rigidbody2D corps;
     private bool movingRight = true;
@@ -36,8 +38,13 @@ public class Ennemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D autre)
     {
-        if (!autre.CompareTag("Player"))
+        if (!autre.CompareTag("Player") && !autre.CompareTag("Ennemy"))
             return;
+
+        if (autre.CompareTag("Ennemy")) 
+        {
+            anim.SetBool("isDead", true);
+        }
 
         Player.Instance.PlayerHealth(-15f);
     }

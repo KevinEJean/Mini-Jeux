@@ -17,6 +17,7 @@ public class ZoneInterdit : MonoBehaviour
         }
 
         autre.transform.position = spawn.position;
+        Player.Instance.PlayerHealth(-5);
         Debug.Log("Player returned to spawn.");
     }
 }

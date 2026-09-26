@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speedText;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private float score = 0f;
-    [SerializeField] private float scoreObjectif = 30f;
+    [SerializeField] private float scoreObjectif = 5f;
 
     private void Awake()
     {
