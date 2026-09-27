@@ -1,12 +1,12 @@
 # 📖 Description
 
-Un jeu de plateforme et d'action en 2D développé avec Unity. Le joueur incarne un personnage évoluant dans un donjon rempli de piégés et d'ennemis. Il doit explorer le niveau, éliminer les menaces à l'aide de son arme et ramasser les objets précieux pour progresser.
+Un jeu de plateforme et d'action en 2D développé avec Unity. Le joueur incarne un personnage évoluant dans un donjon rempli de pièges et d'ennemis. Il doit explorer le niveau, éliminer les menaces à l'aide de son arme et ramasser les objets précieux pour progresser.
 
 ---
 
 # 🧰 Objectif
 
-Le joueur doit collecter tous les pièces (*coins*) pour débloquer et passer au prochain niveau. Pour y parvenir, il peut éliminer les ennemis qui lui bloquent le chemin tout en évitant les pièges mortels comme les scies.
+Le joueur doit collecter toutes les pièces (*coins*) pour débloquer et passer au prochain niveau. Pour y parvenir, il peut éliminer les ennemis qui lui bloquent le chemin tout en évitant les pièges mortels comme les scies.
 
 ## Contrôles
 
@@ -22,9 +22,8 @@ git clone <répertoire-github>
 ```
 
 1. Ouvrir Unity;
-2. Section Projects > Add project from disk > *cliquer sur le dossier cloner ( Mini-Jeu )*;
-
-3. Lancer le projet qui apparait;
+2. Section Projects > Add project from disk > *cliquer sur le dossier cloner ( .../Mini-Jeu )*;
+3. Lancer le projet qui apparaît;
 
 ---
 
