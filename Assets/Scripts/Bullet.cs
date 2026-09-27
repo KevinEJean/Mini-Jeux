@@ -2,17 +2,23 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private float speed = 10f;
     private Rigidbody2D corps;
-    private float speed = 5f;
+
+    private Vector2 direction = Player.Instance.direction;
 
     private void Awake()
     {
         corps = GetComponent<Rigidbody2D>();
+        if (direction.x == 0)
+        {
+            direction = new Vector2(1, 0);
+        }
     }
 
     void FixedUpdate()
     {
-        corps.MovePosition(corps.position + new Vector2(1, 0).normalized * speed * Time.fixedDeltaTime);
+        corps.MovePosition(corps.position + direction * speed * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D autre)
@@ -20,14 +26,6 @@ public class Bullet : MonoBehaviour
         if (!autre.CompareTag("Ennemy") && !autre.CompareTag("Wall"))
             return;
 
-        if (autre.CompareTag("Wall")) 
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        GameManager.Instance.ScoreManager(10);
-        Destroy(autre.gameObject);
         Destroy(gameObject);
     }
 }

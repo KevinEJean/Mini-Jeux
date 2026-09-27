@@ -1,4 +1,4 @@
-using UnityEditor.Timeline;
+using System.Collections;
 using UnityEngine;
 
 public class Ennemy : MonoBehaviour
@@ -12,6 +12,7 @@ public class Ennemy : MonoBehaviour
     private bool movingRight = true;
     Vector2 moveRight = new Vector2(1, 0).normalized;
     Vector2 moveLeft = new Vector2(-1, 0).normalized;
+    Vector3 curRotation;
 
     private void Awake()
     {
@@ -26,24 +27,38 @@ public class Ennemy : MonoBehaviour
     private void Movement()
     {
         Vector2 direction = movingRight ? moveRight : moveLeft;
+        Vector2 horizontal = movingRight ? new Vector2(1, 0) : new Vector2(-1, 0);
+        curRotation = transform.eulerAngles;
 
         corps.MovePosition(corps.position + direction * speed * Time.fixedDeltaTime);
 
         if (movingRight && corps.position.x >= maxRange)
+        {
             movingRight = false;
-
+            transform.eulerAngles = new Vector3(curRotation.x, -200f, curRotation.z);
+        }
         else if (!movingRight && corps.position.x <= minRange)
+        {
             movingRight = true;
+            transform.eulerAngles = new Vector3(curRotation.x, 0, curRotation.z);
+        }
+    }
+
+    private IEnumerator Die() 
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D autre)
     {
-        if (!autre.CompareTag("Player") && !autre.CompareTag("Ennemy"))
+        if (!autre.CompareTag("Player") && !autre.CompareTag("Bullet"))
             return;
 
-        if (autre.CompareTag("Ennemy")) 
+        if (autre.CompareTag("Bullet"))
         {
             anim.SetBool("isDead", true);
+            StartCoroutine(Die());
         }
 
         Player.Instance.PlayerHealth(-15f);

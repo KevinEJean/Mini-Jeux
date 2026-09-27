@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] public float health = 100f;
 
     private Rigidbody2D corps;
-    private Vector2 direction;
+    public Vector2 direction;
     public int coins = 0;
     private bool isShooting = false;
 
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
     {
         anim.SetBool("isDead", true);
         gameObject.SetActive(false);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         GameManager.Instance.GameOver();
     }
 }

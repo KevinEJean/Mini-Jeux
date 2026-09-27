@@ -6452,13 +6452,12 @@ GameObject:
   - component: {fileID: 718832699}
   - component: {fileID: 718832701}
   - component: {fileID: 718832700}
-  - component: {fileID: 718832702}
   - component: {fileID: 718832705}
   - component: {fileID: 718832704}
   - component: {fileID: 718832703}
   m_Layer: 0
   m_Name: Decoration
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6700,18 +6699,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &718832702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718832698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2391f10890677e4aab45abb29b7c372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Item
 --- !u!66 &718832703
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -7959,7 +7946,7 @@ MonoBehaviour:
   speed: 8
   minRange: -10
   maxRange: 13
-  anim: {fileID: 0}
+  anim: {fileID: 1223039753}
 --- !u!50 &1223039752
 Rigidbody2D:
   serializedVersion: 5
@@ -7997,7 +7984,7 @@ Animator:
   m_GameObject: {fileID: 1223039747}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 17416659cc086114ba98756fe74c76f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f256e5e73eab0e4d97343c6f8e0a569, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8039,7 +8026,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -8636,7 +8623,7 @@ MonoBehaviour:
   speed: 11
   minRange: -10
   maxRange: 13
-  anim: {fileID: 0}
+  anim: {fileID: 1627520237}
 --- !u!50 &1627520236
 Rigidbody2D:
   serializedVersion: 5
@@ -8674,7 +8661,7 @@ Animator:
   m_GameObject: {fileID: 1627520231}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 17416659cc086114ba98756fe74c76f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f256e5e73eab0e4d97343c6f8e0a569, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8716,7 +8703,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -9009,6 +8996,7 @@ MonoBehaviour:
   bullet: {fileID: 926068195268114222, guid: f071aea818b48374692588b234c58963, type: 3}
   maxHealth: 100
   health: 100
+  direction: {x: 0, y: 0}
   coins: 0
 --- !u!95 &1705576920
 Animator:
@@ -9607,7 +9595,7 @@ MonoBehaviour:
   speed: 5
   minRange: -10
   maxRange: 13
-  anim: {fileID: 0}
+  anim: {fileID: 2024303402}
 --- !u!50 &2024303401
 Rigidbody2D:
   serializedVersion: 5
@@ -9645,7 +9633,7 @@ Animator:
   m_GameObject: {fileID: 2024303396}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 17416659cc086114ba98756fe74c76f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f256e5e73eab0e4d97343c6f8e0a569, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9687,7 +9675,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
