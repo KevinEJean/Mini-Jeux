@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] public float maxHealth = 100f;
     [SerializeField] public float health = 100f;
+    [SerializeField] public SpriteRenderer spriteRenderer;
 
     private Rigidbody2D corps;
     public Vector2 direction;
@@ -77,13 +78,11 @@ public class Player : MonoBehaviour
     {
         if (horizontal < 0)
         {
-            Vector3 curRotation = transform.eulerAngles;
-            transform.eulerAngles = new Vector3(curRotation.x, -200f, curRotation.z);
+            spriteRenderer.flipX = true;
         }
-        else
+        else if (horizontal > 0)
         {
-            Vector3 curRotation = transform.eulerAngles;
-            transform.eulerAngles = new Vector3(curRotation.x, 0, curRotation.z);
+            spriteRenderer.flipX = false;
         }
     }
 

@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverUI.SetActive(true);
+        Player.Instance.gameObject.SetActive(false);
     }
 
     public void OpenDoor()

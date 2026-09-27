@@ -13,12 +13,12 @@ EditorBuildSettings:
     guid: 53e3113118411ee40bfc5f6a256d39bf
   - enabled: 1
     path: Assets/Scenes/GambleRoom.unity
-    guid: a0355b9d666e8b64195f9f1810087cd7
+    guid: 5c52a6c13e7cd9e43a932bf041dd4c42
   - enabled: 1
     path: Assets/Scenes/Level1.unity
-    guid: 754c29b0da63d624795933ffaa8b46cf
+    guid: 53e3113118411ee40bfc5f6a256d39bf
   - enabled: 1
     path: Assets/Scenes/Level2.unity
-    guid: bc7453015e84cc64a8c1d358f4d42a61
+    guid: 03b19eb89ad3258428ea090c8cf6fe78
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
