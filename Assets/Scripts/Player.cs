@@ -51,9 +51,10 @@ public class Player : MonoBehaviour
     public void PlayerHealth(float value) 
     {
         health += value;
-        if (health < 0)
+        if (health <= 0)
         {
             health = 0;
+            anim.SetBool("isDead", true);
             StartCoroutine(DeathAnim());
         }
         else if (health > 100)
@@ -96,8 +97,6 @@ public class Player : MonoBehaviour
 
     private IEnumerator DeathAnim() 
     {
-        anim.SetBool("isDead", true);
-        gameObject.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         GameManager.Instance.GameOver();
     }
