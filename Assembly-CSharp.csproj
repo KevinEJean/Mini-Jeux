@@ -53,7 +53,6 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.5.9f1\Editor\Data\BCLExtensions\TargetingPacks\netstandard2.1\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Gamble.cs" />
     <Compile Include="Assets\Scripts\ZoneInterdit.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Ennemy.cs" />
@@ -64,7 +63,6 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Saw.cs" />
   </ItemGroup>
   <ItemGroup>
