@@ -2,6 +2,7 @@
 
 Un jeu de plateforme et d'action en 2D développé avec Unity. Le joueur incarne un personnage évoluant dans un donjon rempli de pièges et d'ennemis. Il doit explorer le niveau, éliminer les menaces à l'aide de son arme et ramasser les objets précieux pour progresser.
 
+Lien vers une vidéo démontrant une démo du jeu : [Démo visuel](https://collegemv-my.sharepoint.com/personal/2233405_cegepmv_ca/_layouts/15/stream.aspx?id=%2Fpersonal%2F2233405%5Fcegepmv%5Fca%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files%2FScreenRecording%5F09%2D27%2D2026%2023%2D26%2D59%5F1%5F7802%2Emov&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E2d11f260%2Dc318%2D4736%2Da800%2Dfed416c4d73c)
 ---
 
 # 🧰 Objectif
