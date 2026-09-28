@@ -16,6 +16,7 @@ public class ZoneInterdit : MonoBehaviour
             return;
         }
 
+        AudioManager.Instance.AudioPlayer("teleport");
         autre.transform.position = spawn.position;
         Player.Instance.PlayerHealth(-5);
         Debug.Log("Player returned to spawn.");

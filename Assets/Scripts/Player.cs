@@ -51,6 +51,10 @@ public class Player : MonoBehaviour
 
     public void PlayerHealth(float value) 
     {
+        if (value < 0) 
+        {
+            AudioManager.Instance.AudioPlayer("playerDmg");
+        }
         health += value;
         if (health <= 0)
         {
@@ -67,6 +71,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator Shoot() 
     {
+        AudioManager.Instance.AudioPlayer("playerShoot");
         isShooting = true;
         bullet.transform.position = corps.transform.position;
         Instantiate(bullet);
@@ -89,9 +94,15 @@ public class Player : MonoBehaviour
     private void Anims() 
     {
         if (direction != Vector2.zero)
+        {
+            AudioManager.Instance.AudioPlayer("playerMove");
             anim.SetBool("isMoving", true);
+        }
         else
+        {
+            AudioManager.Instance.StopAudioPlayer("playerMove");
             anim.SetBool("isMoving", false);
+        }
     }
 
     private IEnumerator DeathAnim() 

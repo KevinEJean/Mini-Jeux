@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float score = 0f;
     [SerializeField] private float scoreObjectif = 5f;
 
+    public bool levelCompleted = false;
+
     private void Awake()
     {
         Instance = this;
@@ -53,17 +55,20 @@ public class GameManager : MonoBehaviour
 
     public void Victory() 
     {
+        AudioManager.Instance.AudioPlayer("victory");
         victoryUI.SetActive(true);
     }
 
     public void GameOver()
     {
+        AudioManager.Instance.AudioPlayer("gameOver");
         gameOverUI.SetActive(true);
         Player.Instance.gameObject.SetActive(false);
     }
 
     public void OpenDoor()
     {
+        levelCompleted = true;
         door.SetActive(true);
     }
 

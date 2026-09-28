@@ -10,6 +10,7 @@ public class Ennemy : MonoBehaviour
 
     private Rigidbody2D corps;
     private bool movingRight = true;
+    private bool isDead = false;
     Vector2 moveRight = new Vector2(1, 0).normalized;
     Vector2 moveLeft = new Vector2(-1, 0).normalized;
     Vector3 curRotation;
@@ -21,7 +22,8 @@ public class Ennemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Movement();
+        if (!isDead)
+            Movement();
     }
 
     private void Movement()
@@ -46,7 +48,8 @@ public class Ennemy : MonoBehaviour
 
     private IEnumerator Die() 
     {
-        yield return new WaitForSeconds(0.5f);
+        isDead = true;
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 

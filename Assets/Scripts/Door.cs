@@ -8,17 +8,14 @@ public class Door : MonoBehaviour
         if (!autre.CompareTag("Player"))
             return;
 
-        if (gameObject.tag == "Casino" && Player.Instance.coins > 0)
+        if (gameObject.tag == "Casino")
         {
             GameManager.Instance.LoadGambleRoomScene();
             return;
-        }
-        else if (gameObject.tag == "Level1")
+        } else if (GameManager.Instance.levelCompleted) 
         {
             GameManager.Instance.LoadScene(gameObject.tag);
             return;
         }
-
-        Debug.Log("Boss : 'Job's not done! Get back in there!' (Complete the level to unlock this door)");
     }
 }

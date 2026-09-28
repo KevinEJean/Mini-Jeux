@@ -10,6 +10,7 @@ public class Coin : MonoBehaviour
         Player.Instance.coins += 1;
         GameManager.Instance.ScoreManager(1);
         Debug.Log("Player collected a coin. (coins count: " + Player.Instance.coins + ")");
+        AudioManager.Instance.AudioPlayer("coin");
 
         Destroy(gameObject);
     }

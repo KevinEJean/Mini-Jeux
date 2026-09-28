@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
         {
             direction = new Vector2(1, 0);
         }
+        AudioManager.Instance.AudioPlayer("playerShoot");
     }
 
     void FixedUpdate()

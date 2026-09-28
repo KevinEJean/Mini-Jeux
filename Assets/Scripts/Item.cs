@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
             return;
 
         Player.Instance.PlayerHealth(10f);
+        AudioManager.Instance.AudioPlayer("item");
 
         Destroy(gameObject);
     }
