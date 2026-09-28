@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator Shoot() 
     {
-        AudioManager.Instance.AudioPlayer("playerShoot");
+        //AudioManager.Instance.AudioPlayer("playerShoot");
         isShooting = true;
         bullet.transform.position = corps.transform.position;
         Instantiate(bullet);
