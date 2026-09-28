@@ -45,7 +45,19 @@ public class AudioManager : MonoBehaviour
 
             case "victory":
                 if (!victoryAudio.isPlaying)
+                {
+                    coinAudio.Stop();
+                    flyingEyeAudio.Stop();
+                    itemAudio.Stop();
+                    gameOverAudio.Stop();
+                    playerDmgAudio.Stop();
+                    playerMoveAudio.Stop();
+                    playerShootAudio.Stop();
+                    sawAudio.Stop();
+                    teleportAudio.Stop();
+                    themeAudio.Stop();
                     victoryAudio.Play();
+                }
                 break;
 
             case "teleport":

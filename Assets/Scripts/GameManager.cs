@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float scoreObjectif = 5f;
 
     public bool levelCompleted = false;
+    public bool gameOver = false;
 
     private void Awake()
     {
@@ -55,12 +56,14 @@ public class GameManager : MonoBehaviour
 
     public void Victory() 
     {
+        levelCompleted = true;
         AudioManager.Instance.AudioPlayer("victory");
         victoryUI.SetActive(true);
     }
 
     public void GameOver()
     {
+        gameOver = true;
         AudioManager.Instance.AudioPlayer("gameOver");
         gameOverUI.SetActive(true);
         Player.Instance.gameObject.SetActive(false);

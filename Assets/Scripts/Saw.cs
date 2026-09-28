@@ -7,9 +7,16 @@ public class Saw : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (!GameManager.Instance.levelCompleted && !GameManager.Instance.gameOver)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            if (player != null)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            }
+        }
+        else
+        {
+            gameObject.SetActive(false);
         }
     }
 

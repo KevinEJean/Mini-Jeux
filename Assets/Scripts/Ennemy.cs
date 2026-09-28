@@ -22,8 +22,15 @@ public class Ennemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isDead)
-            Movement();
+        if (!GameManager.Instance.levelCompleted && !GameManager.Instance.gameOver)
+        {
+            if (!isDead)
+                Movement();
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void Movement()

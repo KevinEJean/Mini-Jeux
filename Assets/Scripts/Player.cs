@@ -29,19 +29,26 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        if (!GameManager.Instance.levelCompleted && !GameManager.Instance.gameOver)
+        {
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
 
-        direction = new Vector2(horizontal, vertical).normalized;
+            direction = new Vector2(horizontal, vertical).normalized;
 
-        Direction(horizontal);
+            Direction(horizontal);
 
-        Anims();
+            Anims();
 
-        if (Input.GetKey(KeyCode.Space) && !isShooting)
-            StartCoroutine(Shoot());
+            if (Input.GetKey(KeyCode.Space) && !isShooting)
+                StartCoroutine(Shoot());
 
-        GameManager.Instance.UpdateDisplay(health, maxHealth, speed);
+            GameManager.Instance.UpdateDisplay(health, maxHealth, speed);
+        }
+        else 
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
