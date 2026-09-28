@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
         }
         else 
         {
-            gameObject.SetActive(false);
+            direction = new Vector2(0, 0);
         }
     }
 

@@ -11,7 +11,7 @@ public class Door : MonoBehaviour
         {
             GameManager.Instance.LoadGambleRoomScene();
             return;
-        } else if (GameManager.Instance.levelCompleted) 
+        } else
         {
             GameManager.Instance.LoadScene(gameObject.tag);
             return;

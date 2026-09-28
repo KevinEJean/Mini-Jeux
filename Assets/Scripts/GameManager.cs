@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speedText;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private float score = 0f;
-    [SerializeField] private float scoreObjectif = 5f;
+    [SerializeField] private float scoreObjectif = 6f;
 
     public bool levelCompleted = false;
     public bool gameOver = false;
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     public void ScoreManager(int points) 
     {
         score += points;
-        if (score >= scoreObjectif) 
+        if (score >= scoreObjectif)
         {
             score = scoreObjectif;
             if (SceneManager.GetActiveScene().name == "Level2") 
@@ -65,12 +65,10 @@ public class GameManager : MonoBehaviour
         gameOver = true;
         AudioManager.Instance.AudioPlayer("gameOver");
         gameOverUI.SetActive(true);
-        Player.Instance.gameObject.SetActive(false);
     }
 
     public void OpenDoor()
     {
-        levelCompleted = true;
         door.SetActive(true);
     }
 

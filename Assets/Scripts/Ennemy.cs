@@ -69,6 +69,7 @@ public class Ennemy : MonoBehaviour
         {
             anim.SetBool("isDead", true);
             StartCoroutine(Die());
+            return;
         }
 
         Player.Instance.PlayerHealth(-15f);

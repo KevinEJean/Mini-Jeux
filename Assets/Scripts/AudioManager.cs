@@ -11,7 +11,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource playerDmgAudio;
     [SerializeField] private AudioSource playerMoveAudio;
     [SerializeField] private AudioSource playerShootAudio;
-    [SerializeField] private AudioSource sawAudio;
     [SerializeField] private AudioSource teleportAudio;
     [SerializeField] private AudioSource themeAudio;
     [SerializeField] private AudioSource victoryAudio;
@@ -23,9 +22,6 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //if (SceneManager.GetActiveScene().name == "Level2" && !sawAudio.isPlaying)
-        //    sawAudio.Play();
-
         if (!themeAudio.isPlaying)
             themeAudio.Play();
 
@@ -52,7 +48,6 @@ public class AudioManager : MonoBehaviour
                     playerDmgAudio.Stop();
                     playerMoveAudio.Stop();
                     playerShootAudio.Stop();
-                    sawAudio.Stop();
                     teleportAudio.Stop();
                     themeAudio.Stop();
                     victoryAudio.Play();
@@ -77,11 +72,6 @@ public class AudioManager : MonoBehaviour
             case "playerDmg":
                 if (!playerDmgAudio.isPlaying)
                     playerDmgAudio.Play();
-                break;
-
-            case "playerShoot":
-                if (!playerShootAudio.isPlaying)
-                    playerShootAudio.Play();
                 break;
 
             case "playerMove":
