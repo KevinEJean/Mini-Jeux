@@ -41,7 +41,7 @@ Sprites | https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-
 Tilemaps | https://assetstore.unity.com/packages/2d/environments/2d-dungeon-pixel-art-tileset-171343
 Ennemie | https://assetstore.unity.com/packages/2d/characters/monsters-creatures-fantasy-167949
 '*Coins*' | https://assetstore.unity.com/packages/2d/environments/2d-animated-coin-2d-rpk-22009
-Police de caractère | https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059
+<!-- Police de caractère | https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059 -->
 
 
 
@@ -57,9 +57,9 @@ Défaite | https://www.youtube.com/watch?v=CQeezCdF4mk
 Thème / Musique de fond | https://www.youtube.com/watch?v=wqAYMZSOQao
 Dommage (joueur) | https://www.youtube.com/watch?v=tmlU6CFI0W8
 Courire (joueur) | https://www.youtube.com/watch?v=4u8bCzEfxJM
-Fusil | https://www.youtube.com/watch?v=mHb_nWUd8ik
 Ennemie | https://www.youtube.com/watch?v=8NDZxrDchE4
-Scie | https://www.youtube.com/watch?v=sqG-InLibhY
 Potion de vie | https://www.youtube.com/watch?v=Dck571iVVqI
 Murs | https://www.youtube.com/watch?v=8fLShI3cr4Q
+<!-- Fusil | https://www.youtube.com/watch?v=mHb_nWUd8ik -->
+<!-- Scie | https://www.youtube.com/watch?v=sqG-InLibhY -->
 
